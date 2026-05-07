@@ -1,26 +1,220 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds */
+  --background: #fafaf8;
+  --background-alt: #f3f1ec;
+  --card: #ffffff;
+  --muted: #f0ede7;
+
+  /* Text */
+  --foreground: #1c1917;
+  --foreground-muted: #57534e;
+  --foreground-subtle: #a8a29e;
+
+  /* Brand */
+  --primary: #c2692a;
+  --primary-foreground: #ffffff;
+
+  --secondary: #4a7c6f;
+  --secondary-foreground: #ffffff;
+
+  --accent: #d6b449;
+  --accent-foreground: #1c1917;
+
+  /* Borders */
+  --border: #e7e3df;
+  --border-strong: #c9c4be;
+
+  /* Status */
+  --success: #4a7c6f;
+  --error: #c0392b;
+  --warning: #d6b449;
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  /* Layout */
+  --container-width: 1200px;
 }
 
-@theme inline {
+.dark {
+  --background: #0f0d0c;
+  --background-alt: #181512;
+  --card: #1e1a18;
+  --muted: #262220;
+
+  --foreground: #fafaf8;
+  --foreground-muted: #d6d0cb;
+  --foreground-subtle: #78716c;
+
+  --primary: #e07d42;
+  --primary-foreground: #0f0d0c;
+
+  --secondary: #6aad9e;
+  --secondary-foreground: #0f0d0c;
+
+  --accent: #e0c35c;
+  --accent-foreground: #0f0d0c;
+
+  --border: #2e2a27;
+  --border-strong: #3d3834;
+
+  --success: #6aad9e;
+  --error: #e05a4a;
+  --warning: #e0c35c;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35), 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+@theme {
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased text-base leading-normal min-h-screen;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight text-balance;
+  }
+
+  h1 {
+    @apply text-5xl leading-none md:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl leading-tight md:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl leading-tight md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl leading-snug md:text-2xl;
+  }
+
+  p {
+    @apply text-base leading-7 text-foreground-muted;
+  }
+
+  a {
+    @apply transition-colors duration-300 text-primary underline underline-offset-4 decoration-transparent;
+  }
+
+  a:hover {
+    @apply decoration-primary opacity-80;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply outline-none w-full rounded-xl border border-border
+     bg-card px-4 py-3
+     text-foreground placeholder:text-foreground-subtle
+     transition-all duration-300
+     focus:border-primary focus:ring-2 focus:ring-primary/20;
+  }
+
+  textarea {
+    @apply min-h-32 resize-none;
+  }
+
+  label {
+    @apply text-sm font-medium text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2
+     rounded-xl px-5 py-3
+     text-sm font-medium
+     transition-all duration-300 ease-out
+     focus:outline-none focus:ring-2 focus:ring-primary/20;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground
+    hover:-translate-y-0.5 hover:opacity-90;
+  }
+
+  .btn-secondary {
+    @apply border border-border bg-card text-foreground
+    hover:bg-muted hover:-translate-y-0.5;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-foreground-muted
+    hover:bg-muted hover:text-foreground;
+  }
 }
