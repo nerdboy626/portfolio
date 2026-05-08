@@ -1,7 +1,7 @@
 export default function Design() {
   return (
-    <div className="flex flex-col space-y-2 pb-52">
-      <div className="flex space-x-4">
+    <div className="flex flex-col space-y-2 pb-52 p-4">
+      <div className="flex flex-wrap gap-4 align-center justify-center">
         <div className="w-32 h-32 bg-primary rounded-lg shadow-md flex justify-center items-center">
           <p className="text-black">Primary </p>
         </div>

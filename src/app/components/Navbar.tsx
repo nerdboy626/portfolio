@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DarkModeToggle from "./DarkModeToggle";
@@ -17,6 +17,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -28,8 +29,23 @@ export default function Navbar() {
     setMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [menuOpen]);
+
   return (
     <header
+      ref={navRef}
       className={[
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
@@ -44,10 +60,7 @@ export default function Navbar() {
           className="no-underline shrink-0 flex items-center gap-2 group"
           aria-label="Home"
         >
-          <p
-            className="font-display text-lg font-semibold text-foreground
-                       group-hover:text-primary transition-colors duration-300 m-0"
-          >
+          <p className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300 m-0">
             Logo
           </p>
         </Link>
@@ -95,7 +108,7 @@ export default function Navbar() {
           <button
             className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-[5px] rounded-xl
                        hover:bg-muted transition-colors duration-200"
-            onClick={() => setMenuOpen((o) => !o)}
+            onClick={() => setMenuOpen((open) => !open)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
           >
@@ -144,6 +157,7 @@ export default function Navbar() {
                     ? "bg-primary/10 text-primary"
                     : "text-foreground-muted hover:text-foreground hover:bg-muted",
                 ].join(" ")}
+                onClick={active ? () => setMenuOpen(false) : undefined}
               >
                 {label}
               </Link>
