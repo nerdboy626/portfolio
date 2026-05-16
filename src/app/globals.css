@@ -145,7 +145,7 @@
   *,
   *::before,
   *::after {
-    @apply transition-all duration-900 ease-in-out;
+    @apply transition-colors duration-700 ease-in-out;
   }
 
   html {
@@ -169,7 +169,7 @@
   h4,
   h5,
   h6 {
-    @apply font-display tracking-tight text-balance;
+    @apply font-display tracking-tight text-balance text-foreground;
   }
 
   h1 {
@@ -265,7 +265,7 @@
     hover:bg-muted hover:text-foreground;
   }
 
-  .conatiner {
+  .container {
     max-width: var(--container-width);
     @apply w-full mx-auto px-6;
   }
