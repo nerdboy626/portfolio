@@ -1,3 +1,7 @@
 export default function Contact() {
-  return <h1>Contact Page</h1>;
+  return (
+    <div className="pt-16">
+      <h1>Contact Page</h1>
+    </div>
+  );
 }
