@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 text-center">
         <p className="animate-fade-up mb-4 text-xs font-medium uppercase tracking-[0.15em] text-foreground-subtle [animation-delay:0.05s]">
-          Hi, my name is
+          Hey there! My name is
         </p>
 
         <h1 className="animate-fade-up mb-5 text-[clamp(3.5rem,10vw,6rem)] font-display font-light leading-none tracking-tight text-foreground [animation-delay:0.12s]">

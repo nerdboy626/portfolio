@@ -71,7 +71,9 @@ export default function Navbar() {
           aria-label="Main"
         >
           {navLinks.map(({ label, href }) => {
-            const active = pathname === href;
+            const active =
+              pathname.includes(label.toLowerCase()) ||
+              (label === "Home" && pathname === "/");
             return (
               <Link
                 key={href}
