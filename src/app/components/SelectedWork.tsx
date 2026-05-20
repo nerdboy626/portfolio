@@ -21,7 +21,7 @@ export default function SelectedWork() {
             ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
           style={{ transitionDelay: "0ms" }}
         >
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-foreground-subtle">
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             Selected Work
           </p>
 

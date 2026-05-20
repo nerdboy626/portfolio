@@ -136,7 +136,7 @@ export default function Skills() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-foreground-subtle">
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             Skills
           </p>
           <h2 className="mb-5 text-3xl md:text-4xl">
