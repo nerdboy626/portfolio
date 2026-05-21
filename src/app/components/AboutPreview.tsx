@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Portfolio from "@/app/images/profile.jpeg";
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
 export default function AboutPreview() {
   const { ref, isVisible } = useScrollAnimation(0.3);
