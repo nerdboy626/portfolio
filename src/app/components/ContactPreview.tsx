@@ -13,23 +13,23 @@ export default function ContactPreview() {
       <div className="container">
         <div
           ref={ref}
-          className="mx-auto flex max-w-2xl flex-col items-center text-center"
+          className="mx-auto flex max-w-3xl flex-col items-center text-center"
         >
           {/* Content */}
           <p
-            className={`mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary ${fadeUpClass(isVisible, "delay-100", "translate-y-10")}`}
+            className={`mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary ${fadeUpClass(isVisible, "delay-100", "translate-y-8")}`}
           >
             Get In Touch
           </p>
 
           <h2
-            className={`mb-5 text-3xl md:text-4xl ${fadeUpClass(isVisible, "delay-200", "translate-y-10")}`}
+            className={`mb-5 text-3xl md:text-4xl ${fadeUpClass(isVisible, "delay-200", "translate-y-8")}`}
           >
-            Let's Work Together!
+            Let's work together!
           </h2>
 
           <p
-            className={`mb-6 text-lg leading-8 ${fadeUpClass(isVisible, "delay-300", "translate-y-10")}`}
+            className={`mb-6 text-lg leading-8 ${fadeUpClass(isVisible, "delay-300", "translate-y-8")}`}
           >
             I'm always open to discussing new projects, creative ideas,
             opportunities, or simply connecting with other people in tech.
@@ -37,7 +37,7 @@ export default function ContactPreview() {
 
           {/* CTA Row */}
           <div
-            className={`mb-10 flex flex-col items-center gap-4 sm:flex-row ${fadeUpClass(isVisible, "delay-400", "translate-y-10")}`}
+            className={`mb-6 flex flex-col items-center gap-4 sm:flex-row ${fadeUpClass(isVisible, "delay-400", "translate-y-8")}`}
           >
             <Link href="/contact" className="btn btn-primary no-underline">
               Contact Me
@@ -46,7 +46,7 @@ export default function ContactPreview() {
 
           {/* Floating icon */}
           <div
-            className={`${fadeUpClass(isVisible, "delay-500", "translate-y-10")}`}
+            className={`${fadeUpClass(isVisible, "delay-500", "translate-y-8")}`}
           >
             <motion.div
               animate={{ y: [0, -8, 0] }}

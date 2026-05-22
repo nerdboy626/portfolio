@@ -17,7 +17,7 @@ export default function SelectedWork() {
       >
         {/* Left Content */}
         <div
-          className={`max-w-2xl ${fadeUpClass(isVisible, "delay-100", "translate-y-15")}`}
+          className={`max-w-2xl ${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
         >
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             Selected Work
@@ -42,7 +42,7 @@ export default function SelectedWork() {
         {/* Project Card */}
         <div
           className={`group overflow-hidden rounded-[28px] border border-border bg-card shadow-sm hover:-translate-y-1 hover:border-border-strong hover:shadow-lg 
-            ${fadeUpClass(isVisible, "delay-300", "translate-y-15")}`}
+            ${fadeUpClass(isVisible, "delay-300", "translate-y-12")}`}
         >
           <Link href="/portfolio/poplog">
             <div className="relative aspect-16/10 overflow-hidden border-b border-border bg-muted">
@@ -60,7 +60,7 @@ export default function SelectedWork() {
               Poplog — Fullstack Media Journal
             </h3>
 
-            <div className="mb-6 flex flex-wrap gap-2">
+            <div className="mb-6 flex flex-wrap gap-3">
               {techStack.map((tag) => (
                 <span
                   key={tag}

@@ -13,7 +13,7 @@ export default function AboutPreview() {
         <div ref={ref} className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left Content */}
           <div
-            className={`max-w-2xl ${fadeUpClass(isVisible, "delay-100", "translate-y-15")}`}
+            className={`max-w-2xl ${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
           >
             <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
               Meet the Developer
@@ -36,7 +36,7 @@ export default function AboutPreview() {
 
           {/* Right Image */}
           <div
-            className={`flex justify-center lg:justify-end ${fadeUpClass(isVisible, "delay-300", "translate-y-15")}`}
+            className={`flex justify-center lg:justify-end ${fadeUpClass(isVisible, "delay-300", "translate-y-12")}`}
           >
             <div className="relative">
               <div className="absolute inset-0 scale-105 rounded-full bg-primary/10 blur-3xl" />

@@ -25,33 +25,33 @@ export default function Hero() {
         className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 text-center"
       >
         <p
-          className={`mb-4 text-xs font-medium uppercase tracking-[0.15em] text-foreground-subtle ${fadeUpClass(isVisible, "delay-50", "translate-y-20")}`}
+          className={`mb-4 text-sm font-medium uppercase tracking-[0.15em] text-foreground-subtle ${fadeUpClass(isVisible, "delay-50", "translate-y-16")}`}
         >
           Hey there! My name is
         </p>
 
         <h1
-          className={`mb-5 text-[clamp(3.5rem,10vw,6rem)] font-display font-light leading-none tracking-tight text-foreground ${fadeUpClass(isVisible, "delay-120", "translate-y-20")}`}
+          className={`mb-5 text-[clamp(3.5rem,10vw,6rem)] font-display font-light leading-none tracking-tight text-foreground ${fadeUpClass(isVisible, "delay-120", "translate-y-16")}`}
         >
           Nicolas Caminero<span className="text-primary">.</span>
         </h1>
 
         <div
-          className={`mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary ${fadeUpClass(isVisible, "delay-200", "translate-y-20")}`}
+          className={`mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary ${fadeUpClass(isVisible, "delay-200", "translate-y-16")}`}
         >
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-secondary" />
           Fullstack Developer
         </div>
 
         <p
-          className={`mb-10 max-w-md text-base leading-7 text-foreground-muted ${fadeUpClass(isVisible, "delay-280", "translate-y-20")}`}
+          className={`mb-10 max-w-xl text-lg leading-8 text-foreground-muted ${fadeUpClass(isVisible, "delay-280", "translate-y-16")}`}
         >
           I build modern, responsive web experiences with a focus on
           performance, clean design, and thoughtful user interaction.
         </p>
 
         <div
-          className={`flex flex-wrap justify-center gap-3 ${fadeUpClass(isVisible, "delay-360", "translate-y-20")}`}
+          className={`flex flex-wrap justify-center gap-3 ${fadeUpClass(isVisible, "delay-360", "translate-y-16")}`}
         >
           <Link href="/contact" className="btn btn-primary no-underline">
             Get In Touch

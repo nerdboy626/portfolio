@@ -16,7 +16,7 @@ const containerVariants: Variants = {
 const itemVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 20,
+    y: 12,
   },
   visible: {
     opacity: 1,
@@ -31,7 +31,7 @@ const itemVariants: Variants = {
 const headerVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 20,
+    y: 12,
   },
   visible: {
     opacity: 1,
@@ -49,7 +49,7 @@ export default function Skills() {
       <div className="container">
         {/* Header */}
         <motion.div
-          className="max-w-2xl"
+          className="mb-12 max-w-2xl"
           variants={headerVariants}
           initial="hidden"
           whileInView="visible"
@@ -60,7 +60,7 @@ export default function Skills() {
           </p>
 
           <h2 className="mb-5 text-3xl md:text-4xl">
-            My Toolbox & Technologies.
+            My toolbox & technologies.
           </h2>
 
           <p className="mb-6 text-lg leading-8">
