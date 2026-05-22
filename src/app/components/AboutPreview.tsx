@@ -3,17 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Portfolio from "@/app/images/profile.jpeg";
 import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
+import { fadeUpClass } from "../lib/animation";
 
 export default function AboutPreview() {
-  const { ref, isVisible } = useScrollAnimation(0.3);
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
   return (
     <section className="section">
       <div className="container">
         <div ref={ref} className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left Content */}
           <div
-            className={`max-w-2xl space-y-6 transition-all duration-700 ease-out
-              ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`max-w-2xl ${fadeUpClass(isVisible, "delay-100", "translate-y-15")}`}
           >
             <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
               Meet the Developer
@@ -36,11 +36,9 @@ export default function AboutPreview() {
 
           {/* Right Image */}
           <div
-            className={`flex justify-center lg:justify-end transition-all duration-700 ease-out delay-200
-              ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`flex justify-center lg:justify-end ${fadeUpClass(isVisible, "delay-300", "translate-y-15")}`}
           >
             <div className="relative">
-              {/* subtle background accent */}
               <div className="absolute inset-0 scale-105 rounded-full bg-primary/10 blur-3xl" />
 
               <Image

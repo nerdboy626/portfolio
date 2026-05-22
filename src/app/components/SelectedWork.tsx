@@ -3,23 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import PoplogHome from "@/app/images/poplog-home.png";
 import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
+import { fadeUpClass } from "../lib/animation";
+
+const techStack: string[] = ["React.js", "Express.js", "PostgreSQL", "CSS"];
 
 export default function SelectedWork() {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
   return (
     <section className="section">
-      {/* <div className="container animate-fade-up [animation-delay:0.3s] grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-       
-        <div className="max-w-2xl"> */}
       <div
         ref={ref}
         className="container grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
       >
         {/* Left Content */}
         <div
-          className={`max-w-2xl transition-all duration-700 ease-out
-            ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
-          style={{ transitionDelay: "0ms" }}
+          className={`max-w-2xl ${fadeUpClass(isVisible, "delay-100", "translate-y-15")}`}
         >
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             Selected Work
@@ -43,13 +41,11 @@ export default function SelectedWork() {
 
         {/* Project Card */}
         <div
-          className={`group duration-300 overflow-hidden rounded-[28px] border border-border bg-card shadow-sm transition-all no-underline hover:opacity-100 hover:shadow-lg hover:border-border-strong hover:-translate-y-1
-            ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
-          style={{ transitionDelay: "200ms" }}
+          className={`group overflow-hidden rounded-[28px] border border-border bg-card shadow-sm hover:-translate-y-1 hover:border-border-strong hover:shadow-lg 
+            ${fadeUpClass(isVisible, "delay-300", "translate-y-15")}`}
         >
-          {/* <div className="animate-fade-up [animation-delay:0.5s] group duration-300 overflow-hidden rounded-[28px] border border-border bg-card shadow-sm transition-all no-underline hover:opacity-100 hover:shadow-lg hover:border-border-strong hover:-translate-y-1"> */}
           <Link href="/portfolio/poplog">
-            <div className="relative aspect-[16/10] overflow-hidden border-b border-border bg-muted">
+            <div className="relative aspect-16/10 overflow-hidden border-b border-border bg-muted">
               <Image
                 src={PoplogHome}
                 alt="Poplog project preview"
@@ -60,16 +56,12 @@ export default function SelectedWork() {
           </Link>
 
           <div className="p-6 md:p-8">
-            <div className="mb-4 flex items-start justify-between gap-4">
-              <div>
-                <h3 className="mb-2 text-2xl text-foreground">
-                  Poplog - Fullstack Media Journal
-                </h3>
-              </div>
-            </div>
+            <h3 className="mb-6 text-2xl text-foreground">
+              Poplog — Fullstack Media Journal
+            </h3>
 
-            <div className="flex flex-wrap gap-2 mb-6">
-              {["React.js", "Express.js", "PostgreSQL", "CSS"].map((tag) => (
+            <div className="mb-6 flex flex-wrap gap-2">
+              {techStack.map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-foreground-muted"
