@@ -72,8 +72,7 @@ export default function Navbar() {
         >
           {navLinks.map(({ label, href }) => {
             const active =
-              pathname.includes(label.toLowerCase()) ||
-              (label === "Home" && pathname === "/");
+              href === "/" ? pathname === "/" : pathname.startsWith(href);
             return (
               <Link
                 key={href}
@@ -93,7 +92,7 @@ export default function Navbar() {
 
                 <span
                   className={[
-                    "absolute bottom-1 left-4 h-[2px] w-[calc(100%-32px)] bg-primary origin-left transition-transform duration-300",
+                    "absolute bottom-1 left-4 h-[2px] w-[calc(100%-32px)] bg-primary origin-left transition-transform duration-500 ease-in-out",
                     active ? "scale-x-100" : "scale-x-0",
                   ].join(" ")}
                 />
