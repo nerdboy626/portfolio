@@ -1,4 +1,10 @@
+"use client";
 import * as motion from "motion/react-client";
+import Link from "next/link";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
+import { TbMail } from "react-icons/tb";
+import { RxLinkedinLogo } from "react-icons/rx";
+import { fadeUpClass } from "../lib/animation";
 
 const waves = [
   {
@@ -25,8 +31,9 @@ const waves = [
 ];
 
 export default function ContactPage() {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
   return (
-    <div className="relative min-h-screen overflow-hidden bg-background dark:bg-background">
+    <section className="relative min-h-screen overflow-hidden bg-background-alt">
       {/* radial glow */}
       {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(224,125,66,0.10),transparent_55%)] dark:bg-[radial-gradient(circle_at_top,rgba(224,125,66,0.14),transparent_55%)]" /> */}
 
@@ -89,9 +96,101 @@ export default function ContactPage() {
       ))}
 
       {/* content */}
-      <div className="relative z-10 flex min-h-screen items-center justify-center">
-        <h1>Contact Page</h1>
+      <div
+        ref={ref}
+        className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-16 px-6 py-24 lg:flex-row lg:px-12"
+      >
+        {/* LEFT SIDE */}
+        <div
+          className={`w-full max-w-2xl ${fadeUpClass(isVisible, "delay-50", "translate-y-24")}`}
+        >
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
+            Let's Have a Chat
+          </p>
+
+          <h2 className="mb-5 text-3xl md:text-4xl">
+            I'm always excited to hear about new opportunities and ideas!
+          </h2>
+
+          <p className="mb-6 text-lg leading-8">
+            Whether you&apos;re reaching out about a job opportunity,
+            collaboration, or simply want to connect, I&apos;d love to hear from
+            you.
+          </p>
+
+          <p className="mb-6 text-lg leading-8">
+            I&apos;m always excited to discuss new ideas, creative projects, and
+            opportunities to build thoughtful digital experiences.
+          </p>
+
+          {/* links */}
+          <div className="mt-10 flex gap-3">
+            <Link
+              href="https://www.linkedin.com/in/nicolas-caminero"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary no-underline"
+            >
+              <div>
+                <RxLinkedinLogo className="h-4 w-4" />
+              </div>
+
+              <span className="text-sm font-medium">LinkedIn</span>
+            </Link>
+
+            <Link
+              href="mailto:caminero@alumni.stanford.edu"
+              className="btn btn-secondary no-underline"
+            >
+              <div>
+                <TbMail className="h-4 w-4" />
+              </div>
+
+              <span className="text-sm font-medium">
+                caminero@alumni.stanford.edu
+              </span>
+            </Link>
+          </div>
+        </div>
+
+        {/* RIGHT SIDE */}
+        <div
+          className={` w-full max-w-2xl ${fadeUpClass(isVisible, "delay-150", "translate-y-24")}`}
+        >
+          <div className="rounded-3xl border border-border/50 bg-background/65 p-8 shadow-[0_8px_40px_rgba(0,0,0,0.08)] backdrop-blur-xl">
+            <form className="flex flex-col gap-6">
+              <div>
+                <label>Name</label>
+                <input className="mt-2" type="text" placeholder="Your name" />
+              </div>
+
+              <div>
+                <label>Subject</label>
+
+                <input
+                  className="mt-2"
+                  type="text"
+                  placeholder="What would you like to talk about?"
+                />
+              </div>
+
+              <div>
+                <label>Message</label>
+
+                <textarea
+                  className="mt-2"
+                  rows={6}
+                  placeholder="Write your message here..."
+                />
+              </div>
+
+              <button type="submit" className="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
