@@ -106,6 +106,10 @@
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
 
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
