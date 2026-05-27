@@ -5,6 +5,7 @@ import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 import { TbMail } from "react-icons/tb";
 import { RxLinkedinLogo } from "react-icons/rx";
 import { fadeUpClass } from "../lib/animation";
+import { useState } from "react";
 
 const waves = [
   {
@@ -32,6 +33,48 @@ const waves = [
 
 export default function ContactPage() {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
+  const [formData, setFormData] = useState({
+    name: "",
+    subject: "",
+    message: "",
+  });
+
+  const [isSending, setIsSending] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setIsSending(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSuccess(true);
+
+      setFormData({
+        name: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsSending(false);
+    }
+  };
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-background-alt">
       {/* radial glow */}
@@ -158,10 +201,18 @@ export default function ContactPage() {
           className={` w-full max-w-2xl ${fadeUpClass(isVisible, "delay-150", "translate-y-24")}`}
         >
           <div className="rounded-3xl border border-border/50 bg-background/65 p-8 shadow-[0_8px_40px_rgba(0,0,0,0.08)] backdrop-blur-xl">
-            <form className="flex flex-col gap-6">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div>
                 <label>Name</label>
-                <input className="mt-2" type="text" placeholder="Your name" />
+                <input
+                  className="mt-2"
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  placeholder="Your name"
+                />
               </div>
 
               <div>
@@ -170,6 +221,10 @@ export default function ContactPage() {
                 <input
                   className="mt-2"
                   type="text"
+                  value={formData.subject}
+                  onChange={(e) =>
+                    setFormData({ ...formData, subject: e.target.value })
+                  }
                   placeholder="What would you like to talk about?"
                 />
               </div>
@@ -181,13 +236,26 @@ export default function ContactPage() {
                   className="mt-2"
                   rows={6}
                   placeholder="Write your message here..."
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                 />
               </div>
 
-              <button type="submit" className="btn btn-primary">
-                Send Message
+              <button
+                type="submit"
+                disabled={isSending}
+                className="btn btn-primary"
+              >
+                {isSending ? "Sending..." : "Send Message"}
               </button>
             </form>
+            {success && (
+              <p className="text-sm text-green-600">
+                Message sent successfully!
+              </p>
+            )}
           </div>
         </div>
       </div>
