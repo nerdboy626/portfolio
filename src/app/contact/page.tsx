@@ -17,10 +17,10 @@ export default function ContactPage() {
       {/* content */}
       <div
         ref={ref}
-        className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-16 px-6 py-24 lg:flex-row lg:px-12"
+        className="container relative z-10 flex min-h-screen flex-col justify-center gap-16 py-20 lg:flex-row lg:items-center"
       >
         <div
-          className={`w-full max-w-2xl ${fadeUpClass(isVisible, "delay-50", "translate-y-24")}`}
+          className={`w-full max-w-xl ${fadeUpClass(isVisible, "delay-50", "translate-y-24")}`}
         >
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             Let's Have a Chat

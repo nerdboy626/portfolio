@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Content */}
       <div
         ref={ref}
-        className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 text-center"
+        className="container relative z-10 flex flex-col items-center text-center"
       >
         <p
           className={`mb-4 text-sm font-medium uppercase tracking-[0.15em] text-foreground-subtle ${fadeUpClass(isVisible, "delay-50", "translate-y-16")}`}

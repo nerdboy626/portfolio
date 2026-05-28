@@ -20,7 +20,23 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <Toaster richColors position="top-right" />
+        <Toaster
+          position="top-right"
+          expand
+          closeButton
+          toastOptions={{
+            classNames: {
+              toast: "toast-base",
+              title: "toast-title",
+              description: "toast-description",
+              actionButton: "toast-action",
+              cancelButton: "toast-cancel",
+              success: "toast-success",
+              error: "toast-error",
+              warning: "toast-warning",
+            },
+          }}
+        />
       </body>
     </html>
   );

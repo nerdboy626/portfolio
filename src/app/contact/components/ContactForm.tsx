@@ -75,7 +75,7 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
         "translate-y-24",
       )}`}
     >
-      <div className="rounded-3xl border border-border/50 bg-background/65 p-8 shadow-[0_8px_40px_rgba(0,0,0,0.08)] backdrop-blur-xl">
+      <div className="rounded-[28px] border border-border/50 bg-card/75 p-6 md:p-8 shadow-lg backdrop-blur-xl">
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <div>
             <label htmlFor="name">Name</label>

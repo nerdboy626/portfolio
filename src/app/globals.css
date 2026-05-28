@@ -218,6 +218,26 @@
   label {
     @apply text-sm font-medium text-foreground;
   }
+
+  /* Override default styles for autofill in webkit browsers (Chrome, Safari) */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--foreground);
+    -webkit-box-shadow: 0 0 0px 1000px var(--card) inset;
+
+    transition: background-color 9999s ease-in-out 0s;
+
+    caret-color: var(--foreground);
+
+    border-color: var(--border);
+  }
 }
 
 @layer components {
@@ -251,6 +271,58 @@
 
   .section {
     @apply py-12;
+  }
+
+  .toast-base {
+    @apply rounded-2xl border shadow-lg backdrop-blur-md;
+
+    background: var(--card) !important;
+    border-color: var(--border) !important;
+    color: var(--foreground) !important;
+
+    padding: 1rem !important;
+
+    box-shadow: var(--shadow-lg) !important;
+  }
+
+  .toast-title {
+    @apply font-medium;
+    color: var(--foreground) !important;
+  }
+
+  .toast-description {
+    color: var(--foreground-muted) !important;
+  }
+
+  .toast-success {
+    border-left: 4px solid var(--success) !important;
+  }
+
+  .toast-error {
+    border-left: 4px solid var(--error) !important;
+  }
+
+  .toast-warning {
+    border-left: 4px solid var(--warning) !important;
+  }
+
+  .toast-action {
+    @apply rounded-lg px-3 py-2 text-sm transition-opacity;
+
+    background: var(--primary) !important;
+    color: var(--primary-foreground) !important;
+  }
+
+  .toast-action:hover {
+    opacity: 0.9;
+  }
+
+  .toast-cancel {
+    @apply rounded-lg border px-3 py-2 text-sm;
+
+    background: var(--muted) !important;
+    border-color: var(--border) !important;
+    color: var(--foreground-muted) !important;
   }
 
   .hero-orb {
