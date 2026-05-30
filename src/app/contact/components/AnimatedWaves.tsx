@@ -1,6 +1,7 @@
 "use client";
 
 import * as motion from "motion/react-client";
+import { useEffect, useState } from "react";
 
 type Wave = {
   d: string;
@@ -14,27 +15,36 @@ const waves: Wave[] = [
   {
     d: "M0,200 C200,80 400,340 600,220 C800,100 1000,380 1200,200 L1200,600 L0,600 Z",
     fill: "url(#wave-grad-1)",
-    duration: 9,
-    blur: "blur-[2px] md:blur-[14px]",
+    duration: 14,
+    blur: "blur-[14px]",
     opacity: "opacity-25",
   },
   {
     d: "M0,350 C300,180 600,460 900,280 C1050,190 1150,320 1200,300 L1200,600 L0,600 Z",
     fill: "url(#wave-grad-2)",
-    duration: 12,
-    blur: "blur-[1px] md:blur-[8px]",
+    duration: 18,
+    blur: "blur-[8px]",
     opacity: "opacity-35",
   },
   {
     d: "M0,400 C200,280 500,500 800,350 C950,270 1100,420 1200,380 L1200,600 L0,600 Z",
     fill: "url(#wave-grad-3)",
-    duration: 7,
-    blur: "blur-0 md:blur-[4px]",
+    duration: 11,
+    blur: "blur-[4px]",
     opacity: "opacity-25",
   },
 ];
 
 export default function AnimatedWaves() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
   return (
     <>
       {/* radial glow */}
@@ -43,16 +53,24 @@ export default function AnimatedWaves() {
         <motion.div
           key={wave.fill}
           className={`absolute inset-0 ${wave.blur} ${wave.opacity}`}
-          animate={{
-            x: [0, -40, 30, 0],
-            y: [0, 20, -15, 0],
-            scaleY: [1, 1.08, 0.95, 1],
-          }}
-          transition={{
-            duration: wave.duration,
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
+          animate={
+            isMobile
+              ? undefined
+              : {
+                  x: [0, -40, 30, 0],
+                  y: [0, 20, -15, 0],
+                  scaleY: [1, 1.03, 0.98, 1],
+                }
+          }
+          transition={
+            isMobile
+              ? {}
+              : {
+                  duration: wave.duration,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                }
+          }
         >
           <svg
             viewBox="0 0 1200 600"
