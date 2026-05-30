@@ -42,7 +42,7 @@ export default function ContactPage() {
           </p>
 
           {/* links */}
-          <div className="mt-10 flex gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="https://www.linkedin.com/in/nicolas-caminero"
               target="_blank"
