@@ -1,7 +1,15 @@
+import AboutHero from "./components/AboutHero";
+import Bio from "./components/Bio";
+import Principles from "./components/Principles";
+import Skills from "../components/Skills";
+
 export default function About() {
   return (
-    <div className="pt-16">
-      <h1>About Page</h1>
-    </div>
+    <>
+      <AboutHero />
+      <Bio />
+      <Principles />
+      <Skills />
+    </>
   );
 }
