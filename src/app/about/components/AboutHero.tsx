@@ -1,12 +1,18 @@
+"use client";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
+import { fadeUpClass } from "@/app/lib/animation";
 import Image from "next/image";
 import Portfolio from "@/app/images/profile.jpeg";
 
 export default function AboutHero() {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
   return (
     <section className="section">
       <div className="container pt-12">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="space-y-6">
+        <div ref={ref} className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div
+            className={`space-y-6 ${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
+          >
             <p
               className={`mb-4 text-sm font-medium uppercase tracking-[0.15em] text-primary`}
             >
@@ -20,12 +26,17 @@ export default function AboutHero() {
               <span className="text-primary">.</span>
             </h1>
 
-            <p className={`max-w-xl text-lg leading-8 text-foreground-muted`}>
-              Intro goes here...
+            <p className={`max-w-2xl text-lg leading-8 text-foreground-muted`}>
+              Hey there! I'm Nicolas Caminero, a software developer who enjoys
+              building for the web. I love working across both the frontend and
+              backend, creating products that seamlessly combine intuitive
+              design with reliable functionality.
             </p>
           </div>
 
-          <div className={`flex justify-center lg:justify-end`}>
+          <div
+            className={`flex justify-center lg:justify-end ${fadeUpClass(isVisible, "delay-300", "translate-y-12")}`}
+          >
             <div className="relative">
               <div className="absolute inset-0 scale-105 rounded-full bg-primary/10 blur-3xl" />
 
