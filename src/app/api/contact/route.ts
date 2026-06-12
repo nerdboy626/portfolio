@@ -7,10 +7,10 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, subject, message } = body;
+    const { name, email, subject, message } = body;
 
     // basic validation
-    if (!name || !subject || !message) {
+    if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 },
@@ -27,6 +27,8 @@ export async function POST(req: Request) {
           <h2>New Portfolio Contact</h2>
 
           <p><strong>Name:</strong> ${name}</p>
+
+           <p><strong>Email:</strong> ${email}</p>
 
           <p><strong>Subject:</strong> ${subject}</p>
 
