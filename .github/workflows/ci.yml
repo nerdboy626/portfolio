@@ -28,11 +28,11 @@ jobs:
       - name: Run Linter
         run: npm run lint
 
-      - name: Run Type Check
-        run: npx tsc --noEmit
-
       - name: Run Tests
         run: npm run test
 
       - name: Build Application
         run: npm run build
+
+      - name: Run Type Check
+        run: npx tsc --noEmit
