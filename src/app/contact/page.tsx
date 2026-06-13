@@ -23,11 +23,11 @@ export default function ContactPage() {
           className={`w-full max-w-xl ${fadeUpClass(isVisible, "delay-50", "translate-y-24")}`}
         >
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
-            Let's Have a Chat
+            Let&apos;s Have a Chat
           </p>
 
           <h2 className="mb-5 text-3xl md:text-4xl">
-            I'm always excited to hear about new opportunities and ideas!
+            I&apos;m always excited to hear about new opportunities and ideas!
           </h2>
 
           <p className="mb-6 text-lg leading-8">

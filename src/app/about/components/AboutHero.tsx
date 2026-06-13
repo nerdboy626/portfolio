@@ -27,10 +27,10 @@ export default function AboutHero() {
             </h1>
 
             <p className={`max-w-2xl text-lg leading-8 text-foreground-muted`}>
-              Hey there! I'm Nicolas Caminero, a software developer who enjoys
-              building for the web. I love working across both the frontend and
-              backend, creating products that seamlessly combine intuitive
-              design with reliable functionality.
+              Hey there! I&apos;m Nicolas Caminero, a software developer who
+              enjoys building for the web. I love working across both the
+              frontend and backend, creating products that seamlessly combine
+              intuitive design with reliable functionality.
             </p>
           </div>
 

@@ -25,13 +25,13 @@ export default function ContactPreview() {
           <h2
             className={`mb-5 text-3xl md:text-4xl ${fadeUpClass(isVisible, "delay-200", "translate-y-8")}`}
           >
-            Let's work together!
+            Let&apos;s work together!
           </h2>
 
           <p
             className={`mb-6 text-lg leading-8 ${fadeUpClass(isVisible, "delay-300", "translate-y-8")}`}
           >
-            I'm always open to discussing new projects, creative ideas,
+            I&apos;m always open to discussing new projects, creative ideas,
             opportunities, or simply connecting with other people in tech.
           </p>
 

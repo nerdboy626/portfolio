@@ -53,10 +53,10 @@ export default function Principles() {
                 </h3>
               </div>
               <p>
-                Functional code should solve today's problems while remaining
-                adaptable for tomorrow's. I prioritize performance,
-                maintainability, and architecture that can grow alongside
-                changing requirements.
+                Functional code should solve today&apos;s problems while
+                remaining adaptable for tomorrow&apos;s. I prioritize
+                performance, maintainability, and architecture that can grow
+                alongside changing requirements.
               </p>
             </div>
           </div>
