@@ -17,7 +17,7 @@ export default function ProjectCard({
             ${className}`}
     >
       <Link href={`/portfolio/${project.slug}`}>
-        <div className="relative aspect-16/10 overflow-hidden border-b border-border bg-muted">
+        <div className="relative aspect-[16/9] overflow-hidden border-b border-border bg-muted">
           <Image
             src={project.image}
             alt={project.title}
@@ -27,7 +27,7 @@ export default function ProjectCard({
         </div>
       </Link>
 
-      <div className="p-6 md:p-8">
+      <div className="p-6">
         <h3 className="mb-6 text-2xl text-foreground">{project.title}</h3>
 
         <div className="mb-6 flex flex-wrap gap-3">

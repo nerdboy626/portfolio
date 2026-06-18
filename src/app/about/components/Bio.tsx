@@ -17,7 +17,9 @@ export default function Bio() {
           <h2 className="mb-5 text-3xl md:text-4xl">
             The person behind the code.
           </h2>
-          <GiJourney className="self-center h-48 w-48 text-primary/70" />
+          <div className="flex justify-center">
+            <GiJourney className="h-48 w-48 text-primary/70" />
+          </div>
         </div>
         <div className={`space-y-6`}>
           <p

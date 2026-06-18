@@ -3,7 +3,7 @@ import { LiaLaptopCodeSolid } from "react-icons/lia";
 export default function PortfolioHero() {
   return (
     <section className="section">
-      <div className="container pt-12 flex items-center justify-between flex-wrap">
+      <div className="container pt-12 grid gap-12 lg:grid-cols-[1fr_auto] items-center">
         <div className="max-w-3xl">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             Portfolio
@@ -15,12 +15,14 @@ export default function PortfolioHero() {
           </h1>
 
           <p className="text-lg leading-8 text-foreground-muted">
-            A collection of projects that showcase my experience building modern
-            web applications across the frontend, backend, and everything in
-            between.
+            A collection of software, design, and research projects spanning
+            fullstack web development, mobile applications, and human-centered
+            design.
           </p>
         </div>
-        <LiaLaptopCodeSolid className="h-64 w-64 self-center text-primary/70" />
+        <div className="flex justify-center">
+          <LiaLaptopCodeSolid className="h-64 w-64 text-primary/70" />
+        </div>
       </div>
     </section>
   );

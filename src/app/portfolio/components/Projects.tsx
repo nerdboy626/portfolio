@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <section className="section bg-background-alt">
       <div className="container">
-        <div ref={ref} className="grid gap-16 lg:grid-cols-2">
+        <div ref={ref} className="grid gap-6 lg:gap-12 lg:grid-cols-2">
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
