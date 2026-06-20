@@ -9,8 +9,12 @@ export type Project = {
   image: StaticImageData;
   slug: string;
   title: string;
+  cardTitle: string;
+  tagline: string;
   techStack: string[];
-  link: string;
+  cardLink: string;
+  liveDemoLink?: string;
+  githubLink?: string;
 };
 
 export const projects: Project[] = [
@@ -18,23 +22,35 @@ export const projects: Project[] = [
     id: 1,
     image: PoplogHome,
     slug: "poplog",
-    title: "Poplog — Fullstack Media Journal",
+    title: "Poplog",
+    cardTitle: "Poplog — Fullstack Media Journal",
+    tagline:
+      "A fullstack media journal where users can log and track their favorite movies, TV shows, video games, and books.",
     techStack: ["React.js", "Express", "PostgreSQL", "TMDB API", "IGDB API"],
-    link: "https://poplog-app.vercel.app",
+    cardLink: "https://poplog-app.vercel.app",
+    liveDemoLink: "https://poplog-app.vercel.app",
+    githubLink: "https://github.com/nerdboy626/poplogApp",
   },
   {
     id: 2,
     image: NENA,
     slug: "nena",
-    title: "NENA — Recipe Sharing Platform",
+    title: "NENA",
+    cardTitle: "NENA — Recipe Sharing Platform",
+    tagline:
+      "A mobile-first recipe sharing platform that nurtures a community of food enthusiasts to discover, share, and save recipes.",
     techStack: ["React Native", "JavaScript", "CSS", "Firebase"],
-    link: "https://github.com/nerdboy626/NENA",
+    cardLink: "https://github.com/nerdboy626/NENA",
+    githubLink: "https://github.com/nerdboy626/NENA",
   },
   {
     id: 3,
     image: EventFinder,
     slug: "event-finder",
-    title: "Event Finder — Social Event Discovery",
+    title: "Event Finder",
+    cardTitle: "Event Finder — Social Event Discovery",
+    tagline:
+      "A social event discovery platform that helps users find events and connect with people who share their interests.",
     techStack: [
       "React Native",
       "JavaScript",
@@ -42,14 +58,19 @@ export const projects: Project[] = [
       "Ticketmaster API",
       "Google Maps API",
     ],
-    link: "https://github.com/gxsoto/cs147Lfinalproject",
+    cardLink: "https://github.com/gxsoto/cs147Lfinalproject",
+    githubLink: "https://github.com/gxsoto/cs147Lfinalproject",
   },
   {
     id: 4,
     image: RecoveryGrow,
     slug: "recoverygrow",
-    title: "RecoveryGrow — Holistic Concussion Recovery",
+    title: "RecoveryGrow",
+    cardTitle: "RecoveryGrow — Holistic Concussion Recovery",
+    tagline:
+      "A mobile platform that supports concussion recovery through symptom tracking, educational resources, and design focused on accessibility.",
     techStack: ["Figma", "React Native", "User Research", "Accessibility"],
-    link: "https://hci.stanford.edu/courses/cs147/2022/au/projects/AccessibleDesignEmily/RecoveryBoard/",
+    cardLink:
+      "https://hci.stanford.edu/courses/cs147/2022/au/projects/AccessibleDesignEmily/RecoveryBoard/",
   },
 ];

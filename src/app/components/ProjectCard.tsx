@@ -28,7 +28,7 @@ export default function ProjectCard({
       </Link>
 
       <div className="p-6">
-        <h3 className="mb-6 text-2xl text-foreground">{project.title}</h3>
+        <h3 className="mb-6 text-2xl text-foreground">{project.cardTitle}</h3>
 
         <div className="mb-6 flex flex-wrap gap-3">
           {project.techStack.map((tag) => (
@@ -48,14 +48,14 @@ export default function ProjectCard({
             Learn More
           </Link>
           <Link
-            href={project.link}
+            href={project.cardLink}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary no-underline flex-1"
           >
-            {project.link.includes("vercel")
+            {project.cardLink.includes("vercel")
               ? "Live Demo"
-              : project.link.includes("github")
+              : project.cardLink.includes("github")
                 ? "View on GitHub"
                 : "Visit Site"}
           </Link>
