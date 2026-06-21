@@ -15,6 +15,18 @@ export type Project = {
   cardLink: string;
   liveDemoLink?: string;
   githubLink?: string;
+  overview: {
+    heading: string;
+    content: string;
+  };
+  features: {
+    heading: string;
+    content: string;
+  };
+  challenges: {
+    heading: string;
+    content: string;
+  };
 };
 
 export const projects: Project[] = [
@@ -30,6 +42,18 @@ export const projects: Project[] = [
     cardLink: "https://poplog-app.vercel.app",
     liveDemoLink: "https://poplog-app.vercel.app",
     githubLink: "https://github.com/nerdboy626/poplogApp",
+    overview: {
+      heading: "example titile",
+      content: "example content",
+    },
+    features: {
+      heading: "example heading",
+      content: "example content",
+    },
+    challenges: {
+      heading: "example heading",
+      content: "example content",
+    },
   },
   {
     id: 2,
@@ -42,6 +66,18 @@ export const projects: Project[] = [
     techStack: ["React Native", "JavaScript", "CSS", "Firebase"],
     cardLink: "https://github.com/nerdboy626/NENA",
     githubLink: "https://github.com/nerdboy626/NENA",
+    overview: {
+      heading: "example titile",
+      content: "example content",
+    },
+    features: {
+      heading: "example heading",
+      content: "example content",
+    },
+    challenges: {
+      heading: "example heading",
+      content: "example content",
+    },
   },
   {
     id: 3,
@@ -60,6 +96,18 @@ export const projects: Project[] = [
     ],
     cardLink: "https://github.com/gxsoto/cs147Lfinalproject",
     githubLink: "https://github.com/gxsoto/cs147Lfinalproject",
+    overview: {
+      heading: "example titile",
+      content: "example content",
+    },
+    features: {
+      heading: "example heading",
+      content: "example content",
+    },
+    challenges: {
+      heading: "example heading",
+      content: "example content",
+    },
   },
   {
     id: 4,
@@ -72,5 +120,17 @@ export const projects: Project[] = [
     techStack: ["Figma", "React Native", "User Research", "Accessibility"],
     cardLink:
       "https://hci.stanford.edu/courses/cs147/2022/au/projects/AccessibleDesignEmily/RecoveryBoard/",
+    overview: {
+      heading: "example titile",
+      content: "example content",
+    },
+    features: {
+      heading: "example heading",
+      content: "example content",
+    },
+    challenges: {
+      heading: "example heading",
+      content: "example content",
+    },
   },
 ];

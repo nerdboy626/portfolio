@@ -1,5 +1,8 @@
 import { Project, projects } from "@/app/data/projects";
 import ProjectHero from "./components/ProjectHero";
+import Overview from "./components/Overview";
+import Features from "./components/Features";
+import Challenges from "./components/Challenges";
 
 export default async function ProjectPage({
   params,
@@ -17,5 +20,12 @@ export default async function ProjectPage({
       </section>
     );
   }
-  return <ProjectHero project={project} />;
+  return (
+    <>
+      <ProjectHero project={project} />
+      <Overview project={project} />
+      <Features project={project} />
+      <Challenges project={project} />
+    </>
+  );
 }
