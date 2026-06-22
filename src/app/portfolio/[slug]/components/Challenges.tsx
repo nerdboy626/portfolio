@@ -13,7 +13,7 @@ export default function Overview({ project }: ProjectHeroProps) {
     <section ref={ref} className="section bg-background-alt">
       <div className="container">
         <div
-          className={`max-w-2xl ${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
+          className={`${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
         >
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             Challenges and Lessons Learned
@@ -23,7 +23,9 @@ export default function Overview({ project }: ProjectHeroProps) {
             {project.challenges.heading}
           </h2>
 
-          <p className="mb-6 text-lg leading-8">{project.challenges.content}</p>
+          <p className="mb-6 text-lg leading-8 whitespace-pre-line">
+            {project.challenges.content}
+          </p>
         </div>
       </div>
     </section>
