@@ -113,16 +113,23 @@ export const projects: Project[] = [
     cardLink: "https://github.com/gxsoto/cs147Lfinalproject",
     githubLink: "https://github.com/gxsoto/cs147Lfinalproject",
     overview: {
-      heading: "example titile",
-      content: "example content",
+      heading: "Produced to make friends through the activities that user love",
+      content:
+        "With people having a wide variety of interest, it is sometimes difficult to find someone to attend an event you are interested in. Thus, this application was created help users connect with others who share similar interests, in the hopes that they can become friends and attend social events that both parties are interested in.",
     },
     features: {
-      heading: "example heading",
-      content: ["example content"],
+      heading: "Discover new and exciting events near you",
+      content: [
+        "Global state management system to enable profile editing and customization",
+        "Incorporates Googles Maps API to locate activities in a specified are and parties that are going",
+        "Implements Ticketmaster API to find and gather details on local events, as well as direct users to pages to purchase tickets for them",
+        "Facilitates making connections with others attending the same events and sharing similar interests",
+      ],
     },
     challenges: {
-      heading: "example heading",
-      content: "example content",
+      heading: "Learning to use third-party APIs",
+      content:
+        "This project marked the first time I seriously worked with React Native to create a mobile application. Not only was I learning to implement the design principles that were previously taught to me, but I also went and included an external API to make the app more useful and functional. While I took control of analyzing Ticketmaster API and fetching data from it, my project partner took primary responsibility over Google’s Maps API and putting into our app.\n\nSince I had never been exposed to external APIs before, the biggest thing learned was how to read an external API documentation and figure out how to fetch data from it. By doing so, I expanded my toolset to include third-party data so that I could make products that use real-life data to make the experience for users more meaningful.",
     },
   },
   {
@@ -137,16 +144,25 @@ export const projects: Project[] = [
     cardLink:
       "https://hci.stanford.edu/courses/cs147/2022/au/projects/AccessibleDesignEmily/RecoveryBoard/",
     overview: {
-      heading: "example titile",
-      content: "example content",
+      heading:
+        "Meet the emotional needs of individuals healing from concussions",
+      content:
+        "While concussions directly impact one’s physical health, mental and emotional impacts are often overlooked, which causes those recovering from concussions to often express feelings of isolation and lowered perceptions of self. RecoveryGrow provides a space for users to reflect on one’s health and connect with others. More specifically, we envision RecoveryGrow to be used on a regular basis by users, such that they can log their day-to-day symptoms and emotional wellbeing as they journey through concussion recovery. We also want to encourage them to connect with others through recovery forums, and share their updates with the people in their personal lives.",
     },
     features: {
-      heading: "example heading",
-      content: ["example content"],
+      heading: "Tracking concussion recovery made simple",
+      content: [
+        "Users are able to log their daily symptoms and emotional wellbeing",
+        "Dynamic graphs to help users identify patterns in there symptoms and feelings",
+        "Private and public enabling of entries so people can determine which entries are viewable by other",
+        "Community forums so that users can connect with others who may be sharing similar experiences",
+      ],
     },
     challenges: {
-      heading: "example heading",
-      content: "example content",
+      heading:
+        "Design based the experiences of those suffering from concussions",
+      content:
+        "The most challenging part of this project was the timeline at which myself and my teammates had to prototype and create this application. This project was done within a 10 week course in which we had to ideate features, interview people who would use this application, prototype the designs and pages, and create a final product with React Native. Although the team was under high stress, we communicated everyday and effectively to create a functional application that we could all be proud of.\n\nThe most meaningful part of this project was interviewing and learning from the experience of people currently under concussion recovery. This informed my decisions as I quickly prototyped the design of the features for RecoveryGrow on Figma. For instance, we kept the theme colors dark in response to the fact that many interviewees experienced sensitivity to light after receiving a concussion.",
     },
   },
 ];
