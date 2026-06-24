@@ -45,7 +45,7 @@ describe("ContactForm", () => {
 
     const nameInput = screen.getByLabelText(/name/i);
     const emailInput = screen.getByLabelText(/email/i);
-    const subjectInput = screen.getByLabelText(/subject/i);
+    const subjectInput = screen.getByLabelText(/topic/i);
     const messageInput = screen.getByLabelText(/message/i);
 
     await user.type(nameInput, "Jane Doe");
@@ -89,7 +89,7 @@ describe("ContactForm", () => {
 
     await user.type(screen.getByLabelText(/name/i), "Jane Doe");
     await user.type(screen.getByLabelText(/email/i), "jane@example.com");
-    await user.type(screen.getByLabelText(/subject/i), "Portfolio Question");
+    await user.type(screen.getByLabelText(/topic/i), "Portfolio Question");
     await user.type(screen.getByLabelText(/message/i), "Hello!");
 
     await user.click(
