@@ -25,7 +25,7 @@ export default function Principles() {
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           <div
-            className={`rounded-3xl border border-border bg-card p-8 shadow-sm ${fadeUpClass(isVisible, "delay-150", "translate-y-12")}`}
+            className={`rounded-3xl border border-border bg-card p-6 md:p-8  shadow-sm ${fadeUpClass(isVisible, "delay-150", "translate-y-12")}`}
           >
             <div className="space-y-4">
               <div className="flex items-center gap-2">
@@ -43,7 +43,7 @@ export default function Principles() {
             </div>
           </div>
           <div
-            className={`rounded-3xl border border-border bg-card p-8 shadow-sm ${fadeUpClass(isVisible, "delay-250", "translate-y-12")}`}
+            className={`rounded-3xl border border-border bg-card p-6 md:p-8 shadow-sm ${fadeUpClass(isVisible, "delay-250", "translate-y-12")}`}
           >
             <div className="space-y-4">
               <div className="flex items-center gap-2">
@@ -61,7 +61,7 @@ export default function Principles() {
             </div>
           </div>
           <div
-            className={`rounded-3xl border border-border bg-card p-8 shadow-sm ${fadeUpClass(isVisible, "delay-350", "translate-y-12")}`}
+            className={`rounded-3xl border border-border bg-card p-6 md:p-8  shadow-sm ${fadeUpClass(isVisible, "delay-350", "translate-y-12")}`}
           >
             <div className="space-y-4">
               <div className="flex items-center gap-2">
@@ -79,7 +79,7 @@ export default function Principles() {
             </div>
           </div>
           <div
-            className={`rounded-3xl border border-border bg-card p-8 shadow-sm ${fadeUpClass(isVisible, "delay-450", "translate-y-12")}`}
+            className={`rounded-3xl border border-border bg-card p-6 md:p-8 shadow-sm ${fadeUpClass(isVisible, "delay-450", "translate-y-12")}`}
           >
             <div className="space-y-4">
               <div className="flex items-center gap-2">

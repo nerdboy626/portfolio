@@ -13,7 +13,7 @@ export default function Overview({ project }: ProjectHeroProps) {
     <section ref={ref} className="section bg-background-alt">
       <div className="container">
         <div
-          className={` ${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
+          className={`${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
         >
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             Overview
