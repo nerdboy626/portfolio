@@ -27,7 +27,7 @@ export default function ContactPage() {
           </p>
 
           <h2 className="mb-5 text-3xl md:text-4xl">
-            I&apos;d love to hear about what you're working on!
+            I&apos;d love to hear about what you&apos;re working on!
           </h2>
 
           <p className="mb-6 text-lg leading-8">
@@ -36,8 +36,8 @@ export default function ContactPage() {
           </p>
 
           <p className="mb-6 text-lg leading-8">
-            Feel free to share your ideas, opportunities, or questions, and I'll
-            do my best to respond within 24 hours.
+            Feel free to share your ideas, opportunities, or questions, and
+            I&apos;ll do my best to respond within 24 hours.
           </p>
 
           {/* links */}
