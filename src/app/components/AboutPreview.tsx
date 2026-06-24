@@ -20,13 +20,14 @@ export default function AboutPreview() {
             </p>
 
             <h2 className="mb-5 text-3xl md:text-4xl">
-              I love creating interfaces that balance design and functionality.
+              Creating software with equal parts creativity and engineering.
             </h2>
 
             <p className="mb-6 text-lg leading-8">
-              I’m a fullstack developer focused on building modern digital
-              experiences with clean design, smooth interactions, and purposeful
-              functionality.
+              I&apos;m a software developer who loves transforming ideas into
+              polished digital solutions. My work blends user-centered design,
+              scalable architecture, and a commitment to building products that
+              people genuinely enjoy using.
             </p>
 
             <Link href="/about" className="btn btn-secondary no-underline">

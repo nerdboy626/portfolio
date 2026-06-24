@@ -46,8 +46,8 @@ export default function Hero() {
         <p
           className={`mb-10 max-w-xl text-lg leading-8 text-foreground-muted ${fadeUpClass(isVisible, "delay-280", "translate-y-16")}`}
         >
-          I build modern, responsive web experiences with a focus on
-          performance, clean design, and thoughtful user interaction.
+          I build fullstack web applications that combine thoughtful user
+          experiences, reliable architecture, and modern development practices.
         </p>
 
         <div

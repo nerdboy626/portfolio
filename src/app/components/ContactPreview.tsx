@@ -31,8 +31,9 @@ export default function ContactPreview() {
           <p
             className={`mb-6 text-lg leading-8 ${fadeUpClass(isVisible, "delay-300", "translate-y-8")}`}
           >
-            I&apos;m always open to discussing new projects, creative ideas,
-            opportunities, or simply connecting with other people in tech.
+            Whether you&apos;re looking for a developer, exploring a
+            collaboration, or simply want to connect, I&apos;d be happy to start
+            a conversation.
           </p>
 
           {/* CTA Row */}

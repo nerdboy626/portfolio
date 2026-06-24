@@ -78,7 +78,7 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
       <div className="rounded-[28px] border border-border/50 bg-card/75 p-6 md:p-8 shadow-lg backdrop-blur-xl">
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <div>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Full Name</label>
 
             <input
               id="name"
@@ -93,7 +93,7 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
           </div>
 
           <div>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email Address</label>
 
             <input
               id="email"
@@ -108,7 +108,7 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
           </div>
 
           <div>
-            <label htmlFor="subject">Subject</label>
+            <label htmlFor="subject">Topic</label>
 
             <input
               id="subject"
@@ -131,8 +131,7 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
               rows={6}
               value={formData.message}
               onChange={handleChange}
-              placeholder="Write your message here..."
-              className="mt-2"
+              placeholder="Please write your thoughts here."
               required
             />
           </div>

@@ -22,7 +22,7 @@ export default function Features({ project }: FeaturesProps) {
     <section ref={ref} className="section bg-background">
       <div className="container">
         <div
-          className={`max-w-2xl mb-12 ${fadeUpClass(
+          className={`mb-8 ${fadeUpClass(
             isVisible,
             "delay-100",
             "translate-y-12",

@@ -8,7 +8,7 @@ export default function Principles() {
     <section className="section">
       <div ref={ref} className="container">
         <div
-          className={`max-w-2xl mb-12 ${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
+          className={`mb-8 ${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
         >
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             Why Work With Me

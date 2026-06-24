@@ -17,8 +17,9 @@ export default function Footer() {
             </Link>
 
             <p className="mt-5 text-lg leading-8">
-              Designing and developing thoughtful digital experiences with clean
-              interfaces and modern web technologies.
+              Designing and developing thoughtful digital experiences through
+              modern technologies, clean architecture, and purposeful
+              problem-solving.
             </p>
           </div>
 
@@ -47,7 +48,7 @@ export default function Footer() {
 
           {/* Connect Section */}
           <div>
-            <h4 className="mb-5 text-base font-medium">Let’s Connect</h4>
+            <h4 className="mb-5 text-base font-medium">Let&apos;s Connect</h4>
 
             <div className="space-y-6">
               {/* Email */}

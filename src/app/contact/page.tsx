@@ -27,18 +27,17 @@ export default function ContactPage() {
           </p>
 
           <h2 className="mb-5 text-3xl md:text-4xl">
-            I&apos;m always excited to hear about new opportunities and ideas!
+            I&apos;d love to hear about what you're working on!
           </h2>
 
           <p className="mb-6 text-lg leading-8">
-            Whether you&apos;re reaching out about a job opportunity,
-            collaboration, or simply want to connect, I&apos;d love to hear from
-            you.
+            Whether you&apos;re reaching out about a role, a project, a
+            collaboration, or simply want to connect, my inbox is always open.
           </p>
 
           <p className="mb-6 text-lg leading-8">
-            I&apos;m always excited to discuss new ideas, creative projects, and
-            opportunities to build thoughtful digital experiences.
+            Feel free to share your ideas, opportunities, or questions, and I'll
+            do my best to respond within 24 hours.
           </p>
 
           {/* links */}

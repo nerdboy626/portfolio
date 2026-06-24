@@ -22,14 +22,14 @@ export default function SelectedWork() {
           </p>
 
           <h2 className="mb-5 text-3xl md:text-4xl">
-            Building thoughtful digital experiences.
+            Projects that solve real problems.
           </h2>
 
           <p className="mb-6 text-lg leading-8">
-            Take a look at <span className="font-bold italic">Poplog</span>, my
-            latest project, which bridges media consumption and journaling with
-            clean design, responsive performance, and an enjoyable writing
-            experience.
+            Take a look at <span className="font-bold italic">Poplog</span>, a
+            media tracking platform that brings together content discovery,
+            personal journaling, and data from multiple external services into a
+            single destination.
           </p>
 
           <Link href="/portfolio" className="btn btn-secondary no-underline">

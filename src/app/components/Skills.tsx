@@ -49,7 +49,7 @@ export default function Skills() {
       <div className="container">
         {/* Header */}
         <motion.div
-          className="mb-12 max-w-2xl"
+          className="mb-8"
           variants={headerVariants}
           initial="hidden"
           whileInView="visible"
@@ -64,8 +64,8 @@ export default function Skills() {
           </h2>
 
           <p className="mb-6 text-lg leading-8">
-            Technologies and tools I use to build modern, responsive, and
-            scalable digital experiences.
+            Technologies and tools I have used to design and construct user
+            interfaces, mobile applications, and websites.
           </p>
         </motion.div>
 
