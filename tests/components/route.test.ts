@@ -78,7 +78,7 @@ describe("POST /api/contact", () => {
 
     expect(mockSend).toHaveBeenCalledWith(
       expect.objectContaining({
-        from: "Portfolio Contact <onboarding@resend.dev>",
+        from: "Portfolio Contact <hello@nicolascaminero.com>",
         to: "caminero@alumni.stanford.edu",
         subject: "[Portfolio] Portfolio Question",
         html: expect.stringContaining("john@example.com"),
