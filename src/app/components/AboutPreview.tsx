@@ -40,7 +40,7 @@ export default function AboutPreview() {
             className={`flex justify-center lg:justify-end ${fadeUpClass(isVisible, "delay-300", "translate-y-12")}`}
           >
             <div className="relative">
-              <div className="absolute inset-0 scale-105 rounded-full bg-primary/10 blur-3xl" />
+              <div className="absolute inset-0 scale-105 rounded-full bg-primary/10 blur-3xl transform-[translateZ(0)] will-change-[filter] backface-hidden" />
 
               <Image
                 src={Portfolio}

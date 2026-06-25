@@ -62,6 +62,26 @@ export default function Hero() {
           </Link>
         </div>
       </div>
+      <a
+        href="#selected-work"
+        aria-label="Scroll to selected work section"
+        onClick={(e) => {
+          e.preventDefault();
+          document
+            .getElementById("selected-work")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className={`absolute bottom-12 md:bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-foreground-subtle no-underline ${fadeUpClass(isVisible, "delay-500", "translate-y-8")}`}
+      >
+        <span className="text-xs font-medium uppercase tracking-[0.35em]">
+          Scroll
+        </span>
+
+        <div className="flex flex-col items-center">
+          <span className="scroll-arrow" />
+          <span className="scroll-arrow -mt-1 [animation-delay:0.2s]" />
+        </div>
+      </a>
     </section>
   );
 }

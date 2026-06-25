@@ -8,7 +8,7 @@ import { projects } from "../data/projects";
 export default function SelectedWork() {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
   return (
-    <section className="section">
+    <section id="selected-work" className="section">
       <div
         ref={ref}
         className="container grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
