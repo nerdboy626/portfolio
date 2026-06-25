@@ -32,8 +32,8 @@ export default function DarkModeToggle() {
     <button
       onClick={() => setIsDarkMode((d) => !d)}
       aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-      className="w-9 h-9 flex items-center justify-center rounded-xl
-                 border border-border text-foreground-muted
+      className="w-8 h-8 flex items-center justify-center rounded-xl
+                 border border-foreground text-foreground-muted
                  hover:bg-muted hover:text-foreground hover:border-border-strong
                  transition-all duration-200"
     >
