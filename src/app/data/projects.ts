@@ -12,6 +12,7 @@ export type Project = {
   cardTitle: string;
   tagline: string;
   techStack: string[];
+  cardTechStack: string[];
   cardLink: string;
   liveDemoLink?: string;
   githubLink?: string;
@@ -38,7 +39,26 @@ export const projects: Project[] = [
     cardTitle: "Poplog — Fullstack Media Journal",
     tagline:
       "A fullstack media journal where users can log and track their favorite movies, TV shows, video games, and books.",
-    techStack: ["React.js", "Express", "PostgreSQL", "TMDB API", "IGDB API"],
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Vercel",
+      "Render",
+      "TMDB API",
+      "IGDB API",
+      "Google Books API",
+      "NYT API",
+    ],
+    cardTechStack: [
+      "React.js",
+      "Express",
+      "PostgreSQL",
+      "Vercel",
+      "Render",
+      "REST APIs",
+    ],
     cardLink: "https://poplog-app.vercel.app",
     liveDemoLink: "https://poplog-app.vercel.app",
     githubLink: "https://github.com/nerdboy626/poplogApp",
@@ -72,7 +92,13 @@ export const projects: Project[] = [
     cardTitle: "NENA — Recipe Sharing Platform",
     tagline:
       "A mobile-first recipe sharing platform that nurtures a community of food enthusiasts to discover, share, and save recipes.",
-    techStack: ["React Native", "JavaScript", "CSS", "Firebase"],
+    techStack: ["React Native", "Node.js", "Mobile Development", "Firebase"],
+    cardTechStack: [
+      "React Native",
+      "Node.js",
+      "Mobile Development",
+      "Firebase",
+    ],
     cardLink: "https://github.com/nerdboy626/NENA",
     githubLink: "https://github.com/nerdboy626/NENA",
     overview: {
@@ -107,8 +133,13 @@ export const projects: Project[] = [
       "A social event discovery platform that helps users find events and connect with people who share their interests.",
     techStack: [
       "React Native",
-      "JavaScript",
-      "CSS",
+      "Node.js",
+      "Ticketmaster API",
+      "Google Maps API",
+    ],
+    cardTechStack: [
+      "React Native",
+      "Node.js",
       "Ticketmaster API",
       "Google Maps API",
     ],
@@ -143,7 +174,20 @@ export const projects: Project[] = [
     cardTitle: "RecoveryGrow — Holistic Concussion Recovery",
     tagline:
       "A mobile application that supports concussion recovery through symptom tracking, educational resources, and design focused on accessibility.",
-    techStack: ["Figma", "React Native", "User Research", "Accessibility"],
+    techStack: [
+      "User Research",
+      "Prototyping",
+      "Accessibility",
+      "Figma",
+      "React Native",
+    ],
+    cardTechStack: [
+      "User Research",
+      "Prototyping",
+      "Accessibility",
+      "Figma",
+      "React Native",
+    ],
     cardLink:
       "https://hci.stanford.edu/courses/cs147/2022/au/projects/AccessibleDesignEmily/RecoveryBoard/",
     overview: {

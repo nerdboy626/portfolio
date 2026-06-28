@@ -64,14 +64,15 @@ export default function Skills() {
           </h2>
 
           <p className="mb-6 text-lg leading-8">
-            Technologies and tools I have used to design and construct user
-            interfaces, mobile applications, and websites.
+            A collection of the languages, frameworks, and platforms I use to
+            design, develop, test, and deploy modern web and mobile
+            applications.
           </p>
         </motion.div>
 
         {/* Skills Grid */}
         <motion.div
-          className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 md:grid-cols-4 lg:grid-cols-7"
+          className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 md:grid-cols-4 lg:grid-cols-9"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

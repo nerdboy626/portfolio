@@ -13,7 +13,11 @@ import {
   SiCss,
   SiFigma,
   SiGit,
-  SiGithub,
+  SiVercel,
+  SiRender,
+  SiVitest,
+  SiDocker,
+  SiGithubactions,
 } from "react-icons/si";
 
 type Skill = {
@@ -69,6 +73,31 @@ export const skillsData: Skill[] = [
     color: "#4169E1",
   },
   {
+    name: "Vitest",
+    icon: SiVitest,
+    color: "#6E9F18",
+  },
+  {
+    name: "Docker",
+    icon: SiDocker,
+    color: "#2496ED",
+  },
+  {
+    name: "GitHub Actions",
+    icon: SiGithubactions,
+    color: "#2088FF",
+  },
+  {
+    name: "Vercel",
+    icon: SiVercel,
+    color: "#000000",
+  },
+  {
+    name: "Render",
+    icon: SiRender,
+    color: "#000000",
+  },
+  {
     name: "HTML",
     icon: SiHtml5,
     color: "#E34F26",
@@ -87,10 +116,5 @@ export const skillsData: Skill[] = [
     name: "Git",
     icon: SiGit,
     color: "#F05032",
-  },
-  {
-    name: "GitHub",
-    icon: SiGithub,
-    color: "#000000",
   },
 ];

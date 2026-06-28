@@ -31,7 +31,7 @@ export default function ProjectCard({
         <h3 className="mb-6 text-2xl text-foreground">{project.cardTitle}</h3>
 
         <div className="mb-6 flex flex-wrap gap-3">
-          {project.techStack.map((tag) => (
+          {project.cardTechStack.map((tag) => (
             <span
               key={tag}
               className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-foreground-muted"
