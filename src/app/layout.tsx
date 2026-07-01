@@ -5,8 +5,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Nico Caminero's Portfolio",
+  title: "Nicolas Caminero | Fullstack Developer",
+  description: "Nicolas Caminero's Portfolio Site",
 };
 
 export default function RootLayout({

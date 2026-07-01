@@ -33,16 +33,16 @@ export default function DarkModeToggle() {
       onClick={() => setIsDarkMode((d) => !d)}
       aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
       className="w-8 h-8 flex items-center justify-center rounded-xl
-                 border border-foreground text-foreground-muted
-                 hover:bg-muted hover:text-foreground hover:border-border-strong
+                 border border-foreground-muted text-foreground-muted
+                 hover:bg-muted hover:text-foreground
                  transition-all duration-200"
     >
       {isDarkMode ? (
         /* Sun icon */
-        <PiSunBold className="h-4 w-4 text-foreground" />
+        <PiSunBold className="h-4 w-4 text-foreground-muted" />
       ) : (
         /* Moon icon */
-        <PiMoonBold className="h-4 w-4 text-foreground" />
+        <PiMoonBold className="h-4 w-4 text-foreground-muted" />
       )}
     </button>
   );

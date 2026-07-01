@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SiGithub } from "react-icons/si";
 import { RxLinkedinLogo } from "react-icons/rx";
+import Monogram from "@/app/components/Monogram";
 
 export default function Footer() {
   return (
@@ -9,12 +10,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr] mb-10">
           {/* Brand Section */}
           <div className="max-w-md">
-            <Link
-              href="/"
-              className="font-display text-2xl text-foreground no-underline"
-            >
-              NC
-            </Link>
+            <Monogram className="h-8 w-8" />
 
             <p className="mt-5 text-lg leading-8">
               Designing and developing thoughtful digital experiences through

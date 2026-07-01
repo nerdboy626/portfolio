@@ -4,13 +4,13 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DarkModeToggle from "./DarkModeToggle";
+import Monogram from "@/app/components/Monogram";
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
-  { label: "Design", href: "/design" },
 ];
 
 export default function Navbar() {
@@ -70,12 +70,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="no-underline shrink-0 flex items-center gap-2 group"
+            className="flex items-center text-foreground hover:text-primary duration-300"
             aria-label="Home"
           >
-            <p className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300 m-0">
-              Logo
-            </p>
+            <Monogram className="w-8 h-8" />
           </Link>
 
           {/* Desktop nav */}
@@ -124,19 +122,19 @@ export default function Navbar() {
             >
               <span
                 className={[
-                  "block w-5 h-[1.5px] bg-foreground rounded-full transition-all duration-300 origin-center",
+                  "block w-5 h-[1.5px] bg-foreground-muted rounded-full transition-all duration-300 origin-center",
                   menuOpen ? "rotate-45 translate-y-[6.5px]" : "",
                 ].join(" ")}
               />
               <span
                 className={[
-                  "block w-5 h-[1.5px] bg-foreground rounded-full transition-all duration-300",
+                  "block w-5 h-[1.5px] bg-foreground-muted rounded-full transition-all duration-300",
                   menuOpen ? "opacity-0 scale-x-0" : "",
                 ].join(" ")}
               />
               <span
                 className={[
-                  "block w-5 h-[1.5px] bg-foreground rounded-full transition-all duration-300 origin-center",
+                  "block w-5 h-[1.5px] bg-foreground-muted rounded-full transition-all duration-300 origin-center",
                   menuOpen ? "-rotate-45 -translate-y-[6.5px]" : "",
                 ].join(" ")}
               />
