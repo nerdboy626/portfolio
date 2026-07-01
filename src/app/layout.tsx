@@ -5,8 +5,30 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Nicolas Caminero | Fullstack Developer",
-  description: "Nicolas Caminero's Portfolio Site",
+  metadataBase: new URL("https://nicolascaminero.com"),
+  title: "Nicolas Caminero | Full Stack Developer",
+  description:
+    "Software engineering portfolio showcasing full stack projects built with React, Next.js, TypeScript, Node.js, PostgreSQL, and React Native.",
+  openGraph: {
+    title: "Nicolas Caminero | Full Stack Software Engineer",
+    description:
+      "Software engineering portfolio showcasing full stack projects built with React, Next.js, TypeScript, Node.js, PostgreSQL, and React Native.",
+    url: "https://nicolascaminero.com",
+    siteName: "Nicolas Caminero",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nicolas Caminero Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

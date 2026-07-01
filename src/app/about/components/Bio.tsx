@@ -25,7 +25,7 @@ export default function Bio() {
           <p
             className={`mb-6 text-lg leading-8 ${fadeUpClass(isVisible, "delay-150", "translate-y-12")}`}
           >
-            I&apos;m a fullstack developer with a Bachelor&apos;s degree from
+            I&apos;m a full stack developer with a Bachelor&apos;s degree from
             Stanford University. My education provided a strong foundation in
             computer science while helping me develop skills in systems design,
             algorithms, and software engineering. Along the way, I discovered
@@ -42,7 +42,7 @@ export default function Bio() {
             skills that bridge the gap between theory and real-world software
             development. I&apos;ve had a lot of fun building personal projects,
             experimenting with new technologies, and expanding my toolkit as I
-            work toward becoming a versatile fullstack developer.
+            work toward becoming a versatile full stack developer.
           </p>
           <p
             className={`mb-6 text-lg leading-8 ${fadeUpClass(isVisible, "delay-350", "translate-y-12")}`}

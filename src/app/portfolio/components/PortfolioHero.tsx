@@ -16,7 +16,7 @@ export default function PortfolioHero() {
 
           <p className="text-lg leading-8 text-foreground-muted">
             A collection of software, design, and research projects spanning
-            fullstack web development, mobile applications, and human-centered
+            full stack web development, mobile applications, and human-centered
             interfaces.
           </p>
         </div>
