@@ -70,7 +70,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center text-foreground hover:text-primary duration-300"
+            className="flex items-center text-foreground hover:text-primary transition-none"
             aria-label="Home"
           >
             <Monogram className="w-8 h-8" />

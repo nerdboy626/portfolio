@@ -1,12 +1,19 @@
+"use client";
 import Link from "next/link";
+import { useScrollAnimation } from "./hooks/useScrollAnimation";
+import { fadeUpClass } from "./lib/animation";
 
 export default function NotFound() {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
   return (
     <main className="mt-16 relative flex min-h-[calc(100vh-80px)] items-center justify-center overflow-hidden px-6">
       <div className="hero-orb absolute h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
 
       <section className="w-full max-w-xl">
-        <div className="rounded-[28px] border border-border bg-card p-10 text-center shadow-md">
+        <div
+          ref={ref}
+          className={`rounded-[28px] border border-border bg-card p-10 text-center shadow-md ${fadeUpClass(isVisible, "delay-100", "translate-y-12")}`}
+        >
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.15em] text-primary">
             404
           </p>
