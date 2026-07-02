@@ -71,7 +71,7 @@ export default function Hero() {
             .getElementById("selected-work")
             ?.scrollIntoView({ behavior: "smooth" });
         }}
-        className={`absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-foreground-subtle no-underline ${fadeUpClass(isVisible, "delay-500", "translate-y-8")}`}
+        className={`absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 text-foreground-subtle no-underline [@media(min-height:550px)]:flex ${fadeUpClass(isVisible, "delay-500", "translate-y-8")}`}
       >
         <span className="text-xs font-medium uppercase tracking-[0.35em]">
           Scroll
