@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A modern, responsive developer portfolio built to showcase my software engineering projects, technical skills, and design work. The site serves as a central hub for my work, provides insight into my development process, and offers an easy way for recruiters and collaborators to connect with me.
+A modern, responsive developer portfolio built to showcase my software engineering projects, technical skills, and design experience. The site serves as a central hub for my work, provides insight into my development process, and offers an easy way for recruiters and collaborators to connect with me.
 
 **Live Site:** https://nicolascaminero.com
 
@@ -66,8 +66,6 @@ docker run -p 3000:3000 portfolio
 ```
 
 Then visit http://localhost:3000.
-
-## Deployment
 
 ## Deployment
 
