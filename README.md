@@ -1,20 +1,16 @@
 # Personal Portfolio
 
-A modern, responsive developer portfolio built to showcase my software engineering projects, technical skills, and design work. The site highlights featured projects, provides insight into my development process, and offers an easy way for recruiters and collaborators to get in touch.
+A modern, responsive developer portfolio built to showcase my software engineering projects, technical skills, and design work. The site serves as a central hub for my work, provides insight into my development process, and offers an easy way for recruiters and collaborators to connect with me.
 
 **Live Site:** https://nicolascaminero.com
-
----
 
 ## Screenshot
 
 <p align="center">
-  <img src="./public/images/homepage.png" />
+  <img src="./public/images/homepage.png" alt="Portfolio homepage"/>
 </p>
 
----
-
-## Highlights
+## Key Features
 
 - Built with Next.js App Router and TypeScript
 - Fully responsive design for desktop and mobile devices
@@ -25,11 +21,10 @@ A modern, responsive developer portfolio built to showcase my software engineeri
 - Automated CI pipeline with GitHub Actions
 - Deployed on Vercel with automatic production deployments
 
----
-
 ## Built With
 
 - Next.js
+- React
 - TypeScript
 - Tailwind CSS
 - Motion
@@ -37,8 +32,6 @@ A modern, responsive developer portfolio built to showcase my software engineeri
 - Docker
 - GitHub Actions
 - Vercel
-
----
 
 ## Running Locally
 
@@ -58,11 +51,9 @@ npm run dev
 
 Visit http://localhost:3000.
 
----
-
 ## Running with Docker
 
-Build the Docker image:
+After cloning the repository, build the Docker image:
 
 ```bash
 docker build -t portfolio .
@@ -76,13 +67,11 @@ docker run -p 3000:3000 portfolio
 
 Then visit http://localhost:3000.
 
----
+## Deployment
 
 ## Deployment
 
-The site is deployed on Vercel and automatically redeploys whenever changes are pushed through GitHub Actions.
-
----
+The portfolio is hosted on Vercel. Every push to the main branch automatically triggers a new production deployment, while GitHub Actions verifies that the application installs correctly, passes linting and testing, builds successfully, and can create a Docker image ready for production.
 
 ## About
 
