@@ -59,8 +59,8 @@ export const projects: Project[] = [
       "Render",
       "REST APIs",
     ],
-    cardLink: "https://poplog-app.vercel.app",
-    liveDemoLink: "https://poplog-app.vercel.app",
+    cardLink: "https://poplog.dev",
+    liveDemoLink: "https://poplog.dev",
     githubLink: "https://github.com/nerdboy626/poplogApp",
     overview: {
       heading:
