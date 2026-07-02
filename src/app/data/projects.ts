@@ -1,8 +1,8 @@
 import type { StaticImageData } from "next/image";
-import PoplogHome from "@/app/public/images/poplog-home.png";
-import RecoveryGrow from "@/app/public/images/recoverygrow-logo.svg";
-import NENA from "@/app/public/images/nena-logo.svg";
-import EventFinder from "@/app/public/images/event-finder-preview.svg";
+import PoplogHome from "../../../public/images/poplog-home.png";
+import RecoveryGrow from "../../../public/images/recoverygrow-logo.svg";
+import NENA from "../../../public/images/nena-logo.svg";
+import EventFinder from "../../../public/images/event-finder-preview.svg";
 
 export type Project = {
   id: number;

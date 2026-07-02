@@ -2,7 +2,7 @@
 import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 import { fadeUpClass } from "@/app/lib/animation";
 import Image from "next/image";
-import Portfolio from "@/app/public/images/profile.jpeg";
+import Portfolio from "../../../../public/images/profile.jpeg";
 
 export default function AboutHero() {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();

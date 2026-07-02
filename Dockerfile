@@ -30,6 +30,9 @@ COPY --from=builder /app/.next/standalone ./
 # Copy static assets
 COPY --from=builder /app/.next/static ./.next/static
 
+# Copy public assets
+COPY --from=builder /app/public ./public
+
 # Create a non-root user and group
 RUN addgroup -S nextjs && adduser -S nextjs -G nextjs
 

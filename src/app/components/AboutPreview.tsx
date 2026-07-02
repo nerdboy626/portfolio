@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Portfolio from "@/app/public/images/profile.jpeg";
+import Portfolio from "../../../public/images/profile.jpeg";
 import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 import { fadeUpClass } from "../lib/animation";
 

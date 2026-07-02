@@ -25,6 +25,13 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nicolas Caminero | Full Stack Software Engineer",
+    description:
+      "Software engineering portfolio showcasing full stack projects built with React, Next.js, TypeScript, Node.js, PostgreSQL, and React Native.",
+    images: ["/og-image.png"],
+  },
   robots: {
     index: true,
     follow: true,
