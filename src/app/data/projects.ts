@@ -44,6 +44,9 @@ export const projects: Project[] = [
       "Node.js",
       "Express",
       "PostgreSQL",
+      "Docker",
+      "GitHub Actions",
+      "Vitest",
       "Vercel",
       "Render",
       "TMDB API",
@@ -55,8 +58,8 @@ export const projects: Project[] = [
       "React.js",
       "Express",
       "PostgreSQL",
-      "Vercel",
-      "Render",
+      "Docker",
+      "GitHub Actions",
       "REST APIs",
     ],
     cardLink: "https://poplog.dev",
@@ -66,7 +69,7 @@ export const projects: Project[] = [
       heading:
         "A centralized home for tracking entertainment across every medium.",
       content:
-        "Poplog was born from a simple frustration: keeping track of favorite movies, television shows, games, and books across multiple platforms. I wanted a single destination where users could discover new content, record their experiences, and build a personal archive of the media that matters most to them. The result is a full stack application that combines content discovery with organization.",
+        "Poplog was born from a simple frustration: keeping track of favorite movies, television shows, games, and books across multiple platforms. I wanted a single destination where users could discover new content, record their experiences, and build a personal archive of the media that matters most to them. The result is a full stack application that was engineered with automated testing, continuous integration, and Docker containerization to support a reliable development and deployment workflow.",
     },
     features: {
       heading:
@@ -79,9 +82,10 @@ export const projects: Project[] = [
       ],
     },
     challenges: {
-      heading: "Engineering a unified experience across multiple data sources.",
+      heading:
+        "Engineering a scalable and maintainable full stack application.",
       content:
-        "One of the most demanding aspects of Poplog was integrating four separate APIs, each with its own response structure and data conventions. Creating a consistent user interface required transforming and normalizing incoming data before it could be displayed or stored. I also had to account for rate limits and performance concerns, which led me to implement caching strategies that reduced unnecessary requests and improved responsiveness.\n\nThis project marked my transition from primarily frontend and design work into full stack development. Building the backend API, constructing the database schema, and managing data flow between the client and server gave me a much deeper understanding of how modern web applications operate end-to-end.",
+        "One of the most demanding aspects of Poplog was integrating four separate APIs, each with its own response structure and data conventions. Creating a consistent user interface required transforming and normalizing incoming data before it could be displayed or stored. I also had to account for rate limits and performance concerns, which led me to implement caching strategies that reduced unnecessary requests and improved responsiveness.\n\nAs the project matured, my focus shifted from building features to improving software quality. I introduced unit and component tests with Vitest, automated them through a GitHub Actions CI pipeline, and containerized the frontend, backend, and PostgreSQL database with Docker Compose to create a consistent development environment. These additions gave me experience with modern software engineering practices beyond application development itself.",
     },
   },
   {
